@@ -19,5 +19,6 @@ RUN pacman --noconfirm -S mingw-w64-winpthreads \
 	mingw-w64-headers mingw-w64-gcc mingw-w64-configure mingw-w64-pkg-config
 
 RUN pacman --noconfirm -S mingw-w64-qt5-websockets 
+RUN pacman --noconfirm -S mingw-w64-qt5-quickcontrols2
 
 USER travis
