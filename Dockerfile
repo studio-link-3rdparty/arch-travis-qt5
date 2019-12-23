@@ -5,6 +5,7 @@ WORKDIR /home/travis
 USER root
 RUN pacman -Syu --noconfirm
 RUN pacman -S wget --noconfirm
+RUN yes | pacman -Scc
 
 RUN \
     echo '[ownstuff]' >> /etc/pacman.conf && \
@@ -16,5 +17,7 @@ RUN pacman --noconfirm -S mingw-w64-qt5-base-static
 
 RUN pacman --noconfirm -S mingw-w64-winpthreads \
 	mingw-w64-headers mingw-w64-gcc mingw-w64-configure mingw-w64-pkg-config
+
+RUN pacman --noconfirm -S mingw-w64-qt5-websockets 
 
 USER travis
