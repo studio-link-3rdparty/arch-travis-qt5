@@ -16,3 +16,5 @@ RUN pacman --noconfirm -S mingw-w64-qt5-base-static
 
 RUN pacman --noconfirm -S mingw-w64-winpthreads \
 	mingw-w64-headers mingw-w64-gcc mingw-w64-configure mingw-w64-pkg-config
+
+USER travis
